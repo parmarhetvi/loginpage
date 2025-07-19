@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login FORMS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #cafffb;
+            display: flex;
+            align-items: center;
+            flex-direction: center;
+            min-height: 100vh;
+        }
+        
+        .form-container {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+            margin-top: 20px;
+        }
+        
+        form {
+            background-color: rgba(30, 0, 51, 0.75);
+            /* Transparent dark purple */
+            border: 2px solid #cafffb;
+            border-radius: 20px;
+            padding: 30px 40px;
+            width: 90%;
+            max-width: 520px;
+            box-shadow: 0 0 30px #9b59b6aa, 0 0 60px #8e44ad55;
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+        
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 15px #00ff8877;
+            }
+            50% {
+                box-shadow: 0 0 30px #00ff88;
+            }
+        }
+        
+        h1 {
+            text-align: left;
+            color: #500d7a;
+            font-size: 50px;
+            margin-bottom: 30px;
+            text-shadow: 10 10 10px #23102f88;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #cafffb;
+            font-size: 14px;
+        }
+        
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #cafffb55;
+            border-radius: 10px;
+            color: #a5f4d3;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #00ff88;
+            box-shadow: 0 0 10px #00ff8888;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+        }
+        
+        p {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        
+        button {
+            background-color: transparent;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #00ff8822;
+            box-shadow: 0 0 10px #00ff88;
+        }
+        
+         ::placeholder {
+            color: #e0c0ff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #cafffb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .form-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <h1>LOGIN PAGE</h1>
+    <form action="/submit.php">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter Name">
+        </div>
+
+        <div>
+            <label for="ph">Phone</label>
+            <input id="ph" type="tel" placeholder="Enter phone">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter email">
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input id="password" type="password" placeholder="Enter password" required>
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" type="date" req>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>  <option value="" disabled selected>Select Gender0</option>
+        <option value="male">Male</option>
+        <option value="Female">Female</option>
+        <option value="other">Other</option>
+        </select>
+        </div>
+        <div>
+            <p>Subscription plan</p>
+            <input id="basic" type="radio" name="Subscription" value="basic">
+            <label for="basic">Basic</label>
+            <input id="premium" type="radio" name="Subscription" value="premium">
+            <label for="premium">premium</label>
+            <input id="vip" type="radio" name="Subscription" value="vip">
+            <label for="vip">VIP</label>
+        </div>
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the terms and condition</label>
+        </div>
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Enter your comments" rows="4"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
